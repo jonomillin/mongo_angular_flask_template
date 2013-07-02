@@ -97,6 +97,6 @@ class SomeItem(RestDocument):
 		'date_creation' : datetime.datetime
 	}
 
-	required_fields = ['email', 'name', 'value_1', 'value_2']
+	required_fields = ['email', 'name', 'value_1', 'value_2', 'value_3']
 	default_values = {'date_creation' : datetime.datetime.utcnow}
 
