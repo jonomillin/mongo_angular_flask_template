@@ -1,0 +1,208 @@
+
+h2 {
+	font-weight: 200; 
+	text-align: center;
+	font-size: 30pt;
+	padding-bottom: 40px;
+}
+.big-icon {
+	text-align: center;
+	color: rgb(92, 92, 92);
+}
+.big-icon i {
+	padding: 2px;
+}
+p.feature {
+	text-align: center;
+	font-weight: 300;
+	font-size: 13pt;
+	padding:  0 10px 30px 10px;
+}
+p.feature-justify {
+  text-align: justify;
+  font-weight: 300;
+  font-size: 13pt;
+  padding:  0 10px 30px 10px;
+}
+body {
+	padding-top: 0;
+  font-family: "Lato", helvetica, arial, sans-serif;
+  color: black;
+  background: url("/static/img/DroneField.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%
+}
+.top-bar {
+	background: url("/static/img/header_bg.png");
+	height: 47px;
+	padding: 7px;
+	margin-bottom: 20px;
+}
+.log-in {
+	font-style: italic;
+	padding: 12px;
+	font-size: 14pt;
+	color: white;
+	text-decoration: none;
+}
+.main-box {
+	margin: 10px 0 ;
+	background: rgba(255, 255, 255, 0.9);
+	min-height: 350px;
+	padding: 3%;
+}
+
+.main-box-lower {
+  margin: 10px 0 ;
+  background: rgba(255, 255, 255, 0.9);
+  min-height: 450px;
+  padding: 3%;
+}
+.logo {
+	margin: 0 15px;
+}
+h1 {
+	font-size: 48pt;
+	text-align: center;
+	font-weight: 100;
+  line-height: 48pt;
+}
+.feature-list {
+	margin: 30px 0 ;
+	font-size: 16pt;
+	font-weight: 300;
+	text-align: justify;
+}
+.sign-up {
+	font-style: italic;
+	font-size: 16pt;
+}
+input.input-email {
+	height: 45px;
+	line-height: 20pt;
+	font-size: 14pt;
+	border-radius: 0;
+	display: inline-block;
+	float: left;
+}
+input.send-mail {
+	border-radius: 0;
+	display: inline-block;
+	float: left;
+	margin-left: 0;
+  margin-right: -2%;
+}
+.links li a {
+	color: white;
+	text-decoration: none;
+
+}
+.links {
+	margin-top: 20px;
+	text-align: center;
+	color: white;
+	font-size: 12pt;
+}
+.links li {
+	font-size: 12pt;
+	display: inline;
+	}
+
+/***************
+*   About Us   *
+***************/
+
+.team-img {
+  height: 100px;
+  width: 100px;
+  margin: 10px 0;
+  background: whitesmoke;
+  border-radius: 50%;
+}
+.team-members h4 {
+  margin-top: 40px;
+}
+.team-members p {
+margin-bottom: 58px;
+}
+.center {
+  text-align: center;
+}
+#about-background {
+  background-image: url('/static/img/sweets.jpg');
+  background-repeat: no-repeat;
+  width:100%;
+  height: 180px;
+  margin-top: 80px;
+  margin-bottom: -250px
+}
+
+.big-icon-border {
+  border-radius: 50%;
+  border: 10px solid lightgrey;
+  padding: 15px;
+  color: lightgrey;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  margin: 20px auto;
+
+}
+.center {
+  text-align: center;
+}
+.modal-large{
+    width: 1200px;
+    margin-left: -600px; /* - width/2 */
+}
+/***************
+*   About Us   *
+***************/
+
+.team-img {
+  height: 100px;
+  width: 100px;
+  margin: 10px 0;
+  background: whitesmoke;
+  border-radius: 50%;
+}
+.team-members h4 {
+  margin-top: 40px;
+}
+.team-members p {
+margin-bottom: 58px;
+}
+.center {
+  text-align: center;
+}
+#about-background {
+  background-image: url('/static/img/sweets.jpg');
+  background-repeat: no-repeat;
+  width:100%;
+  height: 180px;
+  margin-top: 80px;
+  margin-bottom: -250px
+}
+
+.big-icon-border {
+  border-radius: 50%;
+  border: 10px solid lightgrey;
+  padding: 15px;
+  color: lightgrey;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  margin: 20px auto;
+
+}
+.center {
+  text-align: center;
+}
+.modal-large{
+    width: 1200px;
+    margin-left: -600px; /* - width/2 */
+}
+

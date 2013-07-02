@@ -1,0 +1,362 @@
+
+html, body, .container {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	font-family: 'Lato';
+	background: whitesmoke;
+}
+.navbar .brand {
+	padding: 0;
+	padding-left:15px;
+}
+.wrapper {
+	margin-top: 80px;
+}
+
+.box {
+	border: 1px solid lightgrey;
+	padding: 15px 0;
+	background-color: white;
+	margin-bottom: 20px
+}
+.box-map {
+	border: 1px solid lightgrey;
+}
+.speed { 
+	padding-left: 10%
+}
+.big-light {
+	margin-top:20px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	font-size: 20pt; 
+	font-weight: lighter;
+	text-align: center
+}
+.big-light i {
+	font-size: 20pt;
+}
+.log {
+	font-size: 8pt;
+}
+.log p {
+	height: 10pt;
+	overflow: hidden;
+	line-height: 10pt;
+}
+.way-points table {
+	font-size: 10pt;
+}
+.btn-map { 
+	border-radius: 0;
+	margin-right: -3px;
+	width: 25%;
+}
+.dashboard-map { 
+	height: 502px;
+}
+.card{
+	margin-right: 10px;
+	margin-bottom: 10px;
+	height: 400px;
+	background:white;
+	-webkit-box-shadow: 2px 2px 5px #999;
+	-moz-box-shadow: 2px 2px 5px #999;
+	-o-box-shadow: 2px 2px 5px #999;
+	box-shadow: 2px 2px 5px #999;
+}
+
+/* General Formatting */
+.bold {font-weight: bold;}
+.lightgreen {color: lightgreen;}
+.white {color: white;}
+.table {border-radius: 0; }
+.center {text-align: center;}
+.rounded {border-radius: 5px;}
+.top-space {margin-top: 20px}
+
+.form-horizontal .control-label {
+	padding-top:10px;
+}
+h3 {
+	font-weight: lighter;
+	color: lightgrey;
+	line-height: 18pt;
+}
+h4 {
+	font-weight: 100;
+	font-size: 24pt;
+	margin-bottom: 20px;
+}
+h5 {
+	margin-top: 15px;
+}
+a.unstyled {
+	text-decoration: none;
+	color: black;
+}
+/*
+.right-panel, .left-panel {
+	height: 100%;
+}
+*/
+.box {
+	padding: 0;
+}
+.box-inner { 
+	padding: 15px;
+}
+.box-inner p {
+	line-height: normal;
+	margin: 0 0 5px;
+} 
+.box-bottom {
+	padding: 15px;
+	font-size: 12pt;
+	font-weight: bold;
+}
+.btn {border-radius: 0}
+.btn-stand-alone {
+	margin-bottom: 20px;
+}
+
+
+/* Map */
+#map-canvas {
+	height: 100%;
+	min-height: 450px;
+}
+.map-overlay {
+	margin-left: -40px;
+}
+.angular-leaflet-map {
+    width: 100%;
+    border: 1px solid lightgrey;
+    padding: 15px 0;
+    background-color: white;
+    margin-bottom: 0px;
+	height: 470px;
+}
+
+
+/* Dashboard */
+.navbar .nav ul li {
+	background-color: inherit;
+}
+.navbar .nav ul a {
+	color: grey;
+}
+.navbar .nav ul a:hover {
+	background: #55d98d;
+	color: white
+}
+.nav-list > .active > a, 
+.nav-list > .active > a:hover, 
+.nav-list > .active > a:focus {
+	background-color: #2ecc71;
+}
+.nav-list > li > a {
+	text-decoration: none;
+}
+.nav-box {
+	padding: 10px 0;
+}
+
+/* aircraft */
+.craft-pic {
+	background-image: url('static/img/X8.jpg');
+	height: 130px;
+	width: 100%;
+	background-position: center;
+	background-size: 100%;
+}
+.craft-stats {
+	width: 100%
+}
+.craft-stats th {
+	text-align: left;
+	width: 30%;
+	font-weight: normal;
+	color: grey;
+}
+.craft-stats td {
+	width: 20%;
+}
+.small-pic {
+	height: 100px;
+	width: 100px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 2px;
+	background-clip: content-box;
+	float: left
+}
+
+/* Missions */
+.missions-table {
+	background-color: white;
+	width: 100%;
+	margin-top: 20px;
+}
+.stat {
+	display: inline-block;
+	width: 75%;
+}
+.dropzone {
+	min-height: 160px;
+	border-radius: 0;
+}
+.table-bordered thead:first-child tr:first-child > th:first-child {
+	border-top-left-radius: 0;
+}
+
+/* Apps */
+
+input.search-query {
+	width: 79%;
+	margin-left: 11px;
+	padding: 0 3px;
+	margin-bottom: 10px;
+}
+
+input.input-small {
+  padding: 2px 5px;
+	margin-top: 3px;
+	margin-bottom: 5px;
+	width: 70px;
+}
+.app-box {
+	border-right-width: 0;
+	border-bottom-width: 0;
+}
+.app {
+	border-color: lightgrey;
+	border-style: solid;
+	border-width: 0;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	
+}
+.row-fluid .span3.app {
+	width: 25%
+}
+.app-bottom {
+	border-bottom-width: 0;
+}
+.app-pic, 
+.app-name, 
+.app-price {
+	padding:3%;
+}
+.app-pic {
+	height: 130px;
+	width: 94%;
+}
+.app-name {
+	float: left;
+	width: 68%;
+	height: 2em;
+	padding: 3%;
+}
+.app-price {
+	margin-top: 6px;
+	width: 18%;
+}
+.app:last-child {
+	border-right-width: 1px;
+}
+.btn-mini {
+	padding: 1px 6px;
+	font-size: 12px;
+}
+.pagination-box {
+	margin-left: 50%
+}
+.pagination {
+	margin-left: -189px;
+}
+.feature-list {
+	margin: 30px 0 ;
+	font-size: 16pt;
+	font-weight: 300;
+	text-align: justify;
+}
+.app-content, .app-photos {
+	margin-top: 20px;
+}
+.app-photo, .app-photo-preview{
+	border: 1px solid lightgrey;
+	padding: 3px;
+	max-height: 300px
+}
+.app-photo-preview {
+	margin: 10px auto;
+	height: 100px;
+}
+.developer-links {
+	text-decoration: none;
+	padding-right: 25px;
+}
+.btn-back {
+	color: grey;
+	text-decoration: none;
+}
+
+/* Profile */
+.badges {
+  margin-top: 15px;
+}
+.profile-badge {
+  width: 40px;
+  float:right;
+  padding: 3px;
+}
+  .profile-pic {
+    border-radius: 50%;
+    max-width: 120px;
+    max-height: 120px;
+    height: 120px;
+    margin: 0 30px 0 20px !important;
+
+  }
+  h1.profile {
+    font-weight: 100;
+    padding-top: 20px;
+    margin-bottom: 0;
+    box-shadow: 0 0 2px lightgrey
+  }
+  .level {}
+  .profile-craft-pic {
+ 
+    height: 80px;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .album {
+    font-size: 10pt;
+  }
+
+
+.big-icon-border {
+	border-radius: 50%;
+	border: 10px solid lightgrey;
+	padding: 15px;
+	color: lightgrey;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	margin: 20px auto;
+}
+
+/* Market Request*/
+.main-box {
+	margin: 10px 0 ;
+	background: rgba(255, 255, 255, 0.9);
+	min-height: 200px;
+	padding: 3%;
+}
+

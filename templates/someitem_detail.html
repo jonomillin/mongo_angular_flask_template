@@ -1,0 +1,36 @@
+ <div ng-show='selected_someitem != undefined' class="row-fluid">
+      <div class="row-fluid">
+        <a href="#" role="button" class="btn btn-warning btn-large" ng-click="deselect()"> Back </a>
+         <a href="" class="btn btn-success btn-large" ng-click='updateSelected()'>Update</a>
+      </div>
+      
+      <br>
+      <div class="row-fluid">
+        <div class="craft box span4 box-inner">
+          <h4>Overview</h4>
+        
+          <table class="craft-stats">
+            <tr>
+              <th>Name</th>
+              <td> <input type="text" ng-model="selected_someitem.name"></td>
+            </tr>
+            <tr>
+              <th>Value 1</th>
+              <td> <input type="text" ng-model="selected_someitem.value_1"> </td>
+            </tr>
+            </tr>
+              <th>Value 2</th>
+             <td> <input type="text"  ng-model="selected_someitem.value_2"> </td>
+            </tr>
+            </tr>
+              <th>Value 3</th>
+             <td> <input type="text"  ng-model="selected_someitem.value_3"> </td>
+            </tr>
+
+            
+          </table>
+        </div> 
+    
+
+      </div>
+    </div>

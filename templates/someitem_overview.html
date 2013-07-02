@@ -1,0 +1,31 @@
+  <div ng-show='selected_someitem == undefined'>
+    <div ng-repeat='someitem in someitems' class="craft box span4">
+      <div class="box-inner">
+        <h4>
+          <a href="#" class="unstyled" ng-click='select(someitem)'>[[someitem.name]]</a>
+        </h4>
+        
+        <table class="craft-stats">
+          <tr>
+            <th>Name</th>
+            <td>[[someitem.name]]</td>
+            <th>Value 1</th>
+            <td>[[someitem.value_1]]</td>
+          </tr>
+          <tr>
+            <th>Value 2</th>
+            <td>[[someitem.value_2]]</td>
+            <th>Value 3</th>
+            <td>[[someitem.value_3]]</td>
+          </tr>
+        </table> 
+      </div>
+
+    </div>
+  
+    <div class="row-fluid">
+      <a href="#createModal" role="button" data-toggle="modal" 
+          class="span4 offset4 btn btn-success btn-large"> 
+          <i class="icon-plus"></i> Add SomeItem </a>
+      </div>
+    </div>
