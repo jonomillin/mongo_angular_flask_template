@@ -1,0 +1,42 @@
+ <div ng-show='selected_map != undefined' class="row-fluid">
+      <div class="row-fluid">
+        <a href="#" role="button" class="btn btn-warning btn-large" ng-click="deselect()"> Back </a>
+         <a href="" class="btn btn-success btn-large" ng-click='updateSelected()'>Update</a>
+      </div>
+      
+      <br>
+      <div class="row-fluid">
+        <div class="craft box span10 box-inner">
+          <h4>Overview</h4>
+        
+          <table class="craft-stats" style="width:300px;">
+            <tr>
+              <th>Name</th>
+              <td> <input type="text" ng-model="selected_map.name"></td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td> <input type="text" ng-model="selected_map.email"> </td>
+            </tr>
+            <tr>
+              <th>Date Created</th>
+             <td> <input type="text"  ng-model="selected_map.date_created"> </td>
+            </tr>
+            <tr>
+              <th><b>Waypoints</b></th>
+            </tr>
+            <tr ng-repeat='waypoint in selected_map.waypoints'>
+              <th>WP [[waypoint.wp_no]]:</th>
+             <td> Lat: <input type="text"  ng-model="waypoint.lat"> </td>
+             <td> Lng: <input type="text"  ng-model="waypoint.lng"> </td>
+             <td> Alt: <input type="text"  ng-model="waypoint.alt"> </td>
+            </tr>
+            <!-- TODO: Add waypoint button here... -->
+
+            
+          </table>
+        </div> 
+    
+
+      </div>
+    </div>

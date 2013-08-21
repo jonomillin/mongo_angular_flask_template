@@ -1,0 +1,77 @@
+<!-- Modal -->
+<div id="createModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Add map</h3>
+  </div>
+
+  <div class="modal-body form-horizontal" >  
+    <div class="control-group">
+      <label class="control-label">Name</label>
+      <div class="controls">
+        <input type='text' ng-model='new_map.name'>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Email</label>
+      <div class="controls">
+        <input type='text' ng-model='new_map.email'>
+      </div>
+    </div>
+
+<!-- Add if statement here? -->
+    <div class="control-group">
+      <table class="span 3">
+        <tr ng-repeat='wp in new_map.waypoints'>
+         <th>WP [[wp.wp_no]]:</th>
+         <td> Lat: [[wp.lat]] </td>
+         <td> Lng: [[wp.lng]] </td>
+         <td> Alt: [[wp.alt]] </td>
+         <td> Action: [[wp.action]] </td>
+        </tr>
+      </table>
+    </div>
+
+    New Waypoint :
+    <div class="control-group">
+
+      <label class="control-label">Lat</label>
+      <div class="controls">
+        <input type='text' ng-model='new_waypoint.lat'>
+      </div>
+
+      <label class="control-label">Lng</label>
+      <div class="controls">
+        <input type='text' ng-model='new_waypoint.lng'>
+      </div>
+
+      <label class="control-label">Alt</label>
+      <div class="controls">
+        <input type='text' ng-model='new_waypoint.alt'>
+      </div>
+
+      <label class="control-label">Action</label>
+      <div class="controls">
+        <select name="action" id="" ng-model='new_waypoint.action'>
+          <option value="TAKEOFF">TAKEOFF</option>
+          <option value="LAND">LAND</option>
+          <option value="GOTO">GOTO</option>
+
+        </select>
+      </div>
+
+     <button class="btn btn-primary" ng-click='add_waypoint(new_waypoint);'><i class="icon-plus"></i> Add Waypoint</button>
+
+     
+    </div>
+
+    
+   
+  </div>
+  
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true" ng-click='save(new_map);'>Create</button>
+  </div>
+</div>

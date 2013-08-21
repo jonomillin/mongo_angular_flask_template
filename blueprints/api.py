@@ -37,5 +37,35 @@ def rest_api_someitem(_id=None):
 		return connection.SomeItem.as_json(_id, email)
 			
 	# Restful http delete
-	#if request.method == 'DELETE':
-	#	return connection.SomeItem.delete(_id)
+	# if request.method == 'DELETE':
+	# 	return connection.SomeItem.delete(_id)
+
+
+@api_pages.route('/api/v1/map', methods=['GET', 'POST'])
+@api_pages.route('/api/v1/map/<_id>', methods=['PUT', 'DELETE', 'GET'])
+#@require_authorization
+def rest_api_someitem(_id=None):
+
+	email = "example@example.com"
+
+	# Restful http post
+	if request.method == 'POST':
+		dic = json.loads(request.data)
+		somemap = connection.Map()
+		somemap.update_from_dict(dic, email=email)
+		return somemap.commit_model()
+
+	# Restful http put
+	if request.method == 'PUT':
+		dic = json.loads(request.data)
+		somemap = connection.Map.one({'_id' : ObjectId(_id)})
+		somemap.update_from_dict(dic, exclude=['date_creation', 'email'])
+		return somemap.commit_model()
+
+	# Restful http get
+	if request.method == 'GET':
+		return connection.Map.as_json(_id, email)
+			
+	# Restful http delete
+	# if request.method == 'DELETE':
+	# 	return connection.Map.delete(_id)

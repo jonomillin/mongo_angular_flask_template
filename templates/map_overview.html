@@ -1,0 +1,40 @@
+  <div ng-show='selected_map == undefined'>
+    <div ng-repeat='map in maps' class="craft box span6">
+      <div class="box-inner">
+        <h4>
+          <a href="#" class="unstyled" ng-click='select(map)'>[[map.name]]</a>
+        </h4>
+        
+        <table class="craft-stats">
+          <tr>
+            <th>Name</th>
+            <td>[[map.name]]</td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td>[[map.email]]</td>
+          </tr>
+          <tr>
+            <th>Date Created</th>
+            <td>[[map.creation_date]]</td>
+          </tr>
+          <tr>
+            <th><b>Waypoints</b></th>
+          </tr>
+          <tr ng-repeat='waypoint in map.waypoints'>
+            <th>WP [[waypoint.wp_no]]:</th>
+            <td>lat: [[waypoint.lat]]</td>
+            <td>lng: [[waypoint.lat]]</td>
+            <td>alt: [[waypoint.alt]]</td>
+          </tr>
+        </table> 
+      </div>
+
+    </div>
+  <!-- Create a new one an move to the detail page with nothing selected. -->
+    <div class="row-fluid">
+      <a href="#createModal" role="button" data-toggle="modal" 
+          class="span4 offset4 btn btn-success btn-large"> 
+          <i class="icon-plus"></i> Add Map</a>
+      </div>
+    </div>

@@ -100,3 +100,16 @@ class SomeItem(RestDocument):
 	required_fields = ['email', 'name', 'value_1', 'value_2', 'value_3']
 	default_values = {'date_creation' : datetime.datetime.utcnow}
 
+@connection.register
+class Map(RestDocument):
+	use_dot_notation = True
+	__collection__ = 'maps'
+	__database__ = DATABASE_NAME
+	structure = {
+		'email' : unicode,
+		'name' : unicode,
+		'waypoints' : list, # Waypoints can simply be a dictionary (lat, lng, alt, action)
+		'date_creation' : datetime.datetime
+	}
+	required_fields = ['email', 'name', 'waypoints']
+	default_values = {'date_creation' : datetime.datetime.utcnow}

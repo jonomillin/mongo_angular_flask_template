@@ -9,3 +9,14 @@ angular.module('someitemService', ['ngResource']).
 	});
 
 
+angular.module('mapService', ['ngResource']).
+    factory('Map', function($resource){
+  		return $resource('/api/v1/map/:mapId', {}, {
+    		query:   {method:'GET',     params:{mapId : ''},          isArray : true},
+    		get:     {method:'GET',     params:{mapId : ''},          isArray : false},
+    		save:    {method:'POST',    params:{mapId : ''},          isArray : false},
+    		update:  {method:'PUT',     params:{mapId : '@_id.$oid'}, isArray : false},
+  		});
+	});
+
+

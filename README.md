@@ -1,5 +1,5 @@
 Mongo Angular Flask Template 
-=======================
+============================
 
 Run in debug mode for development:
 ----------------------------------
