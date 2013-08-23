@@ -1,21 +1,33 @@
-Notes.txt
+TODO.txt
 
-1) Add routes in blueprints.py (or equiv)
+Setup Backend
+~~~~~~~~~~~~~
+1) [X] Add routes in blueprints.py (or equiv)
 	Test that you can see the HTML being loded
 
-2) Add Mongo datamodel in models.py
+2) [X] Add Mongo datamodel in models.py
 	Open up python to test the data model.
 		"""
-		from models.models import SomeItem
+		from models.models import *
 
-		s = SomeItem()
+		s = connection.SomeItem()
 		s.save()
 		# This should fail because of required fields
 		s.validate()
 		s.email = "blah@asdf.bce"
 		"""
 
-3) Add the controler in controllers.js
-4) Add in static data to test pretend data without the connection
-5) Add the data bindings and test the HTML etc.
-6) Add the Service to connect Mongo to the Service.
+Setup Frontend
+~~~~~~~~~~~~~~
+3) [X] Add the controler in controllers.js
+4) [X] Add in static data to test pretend data without the connection
+5) [X] Add the data bindings and test the HTML etc.
+
+Connect Frontend to Backend
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6) [X] Add the Service to connect Mongo to the Service.
+
+Build Map Interface
+~~~~~~~~~~~~~~~~~~~
+7) [ ] Add canvas Template
+8) [ ] Add Controls for the canvas

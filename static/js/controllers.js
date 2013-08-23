@@ -24,11 +24,11 @@ function SomeItemCtrl($scope, SomeItem) {
     ]
 
 
-    // $scope.someitems  = SomeItem.query( function(d) {
-    //     console.log('Received someitem');
-    //     console.log(d);
+    $scope.someitems  = SomeItem.query( function(d) {
+        console.log('Received someitem');
+        console.log(d);
         
-    // });
+    });
 
     $scope.new_someitem = {
         name    : 'Not set yet',
@@ -80,43 +80,45 @@ function SomeItemCtrl($scope, SomeItem) {
  */
 function MapCtrl($scope, Map) {
     
-    $scope.maps = [
-        {
-            name        : 'First Tester',
-            email       : 'jono@dronedeploy.com',
-            waypoints   : [
-                {
-                    wp_no : 0,
-                    lat : 45.102,
-                    lng : 20.213,
-                    alt : 100,
-                    action : "FLY"
-                },
+    // $scope.maps = [
+    //     {
+    //         name        : 'First Tester',
+    //         email       : 'jono@dronedeploy.com',
+    //         waypoints   : [
+    //             {
+    //                 wp_no : 0,
+    //                 lat : 45.102,
+    //                 lng : 20.213,
+    //                 alt : 100,
+    //                 action : "FLY"
+    //             },
 
-                {
-                    wp_no : 1,
-                    lat : 45.112,
-                    lng : 20.223,
-                    alt : 120,
-                    action : "FLY"
-                },
+    //             {
+    //                 wp_no : 1,
+    //                 lat : 45.112,
+    //                 lng : 20.223,
+    //                 alt : 120,
+    //                 action : "FLY"
+    //             },
 
-                {
-                    wp_no : 2,
-                    lat : 45.13,
-                    lng : 20.23,
-                    alt : 150,
-                    action : "FLY"
-                },
-            ],
-            creation_date : "20/08/2013, 2pm",
+    //             {
+    //                 wp_no : 2,
+    //                 lat : 45.13,
+    //                 lng : 20.23,
+    //                 alt : 150,
+    //                 action : "FLY"
+    //             },
+    //         ],
+    //         creation_date : "20/08/2013, 2pm",
             
-        }
-    ]
-    // $scope.maps  = Map.query( function(d) {
-    //     console.log('Received map');
-    //     console.log(d);
-    // });
+    //     }
+    // ];
+
+
+    $scope.maps  = Map.query( function(d) {
+        console.log('Received map');
+        console.log(d);
+    });
 
     $scope.new_map = {
         name        : 'Not set yet',
@@ -129,7 +131,7 @@ function MapCtrl($scope, Map) {
         lat : 0,
         lng : 0,
         alt : 100,
-        action : "NONE"
+        action : "GOTO"
     };
 
     $scope.selected_map = undefined;
@@ -144,15 +146,35 @@ function MapCtrl($scope, Map) {
             lat : 0,
             lng : 0,
             alt : 100,
-            action : "NONE"
+            action : "GOTO"
         };
-        // $scope.$digest();
+    }
+    $scope.remove_waypoint = function(wp) {
+        console.log(wp);
+        console.log(wp.wp_no);
+        new_wps = [];
+        found = false;
+        for(var i=0; i<$scope.selected_map.waypoints.length; i++) {
+            if($scope.selected_map.waypoints[i].wp_no === wp.wp_no) {
+                console.log("removing waypoint: "+i);
+                found = true;   
+            }
+            else {
+                cur = $scope.selected_map.waypoints[i];
+                if(found) {
+                    cur.wp_no = cur.wp_no-1;
+                }
+                new_wps.push(cur);
+            }
+        }
+        $scope.selected_map.waypoints = new_wps;
+        // Potentially update here...
     }
 
     $scope.save = function(map)
     {
-        // Map.save(map, function(d) {
-            $scope.maps.push(map);
+        Map.save(map, function(d) {
+            $scope.maps.push(d);
             $scope.new_map = {
                 name        : 'Not set yet',
                 email       : 'Not set yet',
@@ -160,7 +182,7 @@ function MapCtrl($scope, Map) {
             };
             $scope.new_waypoint.wp_no = 0;
 
-        // });     
+        });     
     }
 
     $scope.deselect = function() {

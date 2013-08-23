@@ -46,7 +46,7 @@ def rest_api_someitem(_id=None):
 #@require_authorization
 def rest_api_someitem(_id=None):
 
-	email = "example@example.com"
+	email = "jono@dronedeploy.com"
 
 	# Restful http post
 	if request.method == 'POST':
@@ -64,6 +64,7 @@ def rest_api_someitem(_id=None):
 
 	# Restful http get
 	if request.method == 'GET':
+		print("In here...")
 		return connection.Map.as_json(_id, email)
 			
 	# Restful http delete

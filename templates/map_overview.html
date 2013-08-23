@@ -1,5 +1,5 @@
   <div ng-show='selected_map == undefined'>
-    <div ng-repeat='map in maps' class="craft box span6">
+    <div ng-repeat='map in maps' class="craft box span8">
       <div class="box-inner">
         <h4>
           <a href="#" class="unstyled" ng-click='select(map)'>[[map.name]]</a>
@@ -26,6 +26,7 @@
             <td>lat: [[waypoint.lat]]</td>
             <td>lng: [[waypoint.lat]]</td>
             <td>alt: [[waypoint.alt]]</td>
+            <td>action: [[waypoint.action]]</td>
           </tr>
         </table> 
       </div>

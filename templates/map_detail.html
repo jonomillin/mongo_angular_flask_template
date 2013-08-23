@@ -9,28 +9,32 @@
         <div class="craft box span10 box-inner">
           <h4>Overview</h4>
         
-          <table class="craft-stats" style="width:300px;">
-            <tr>
-              <th>Name</th>
-              <td> <input type="text" ng-model="selected_map.name"></td>
-            </tr>
-            <tr>
-              <th>Email</th>
-              <td> <input type="text" ng-model="selected_map.email"> </td>
-            </tr>
-            <tr>
-              <th>Date Created</th>
-             <td> <input type="text"  ng-model="selected_map.date_created"> </td>
-            </tr>
-            <tr>
-              <th><b>Waypoints</b></th>
-            </tr>
-            <tr ng-repeat='waypoint in selected_map.waypoints'>
-              <th>WP [[waypoint.wp_no]]:</th>
-             <td> Lat: <input type="text"  ng-model="waypoint.lat"> </td>
-             <td> Lng: <input type="text"  ng-model="waypoint.lng"> </td>
-             <td> Alt: <input type="text"  ng-model="waypoint.alt"> </td>
-            </tr>
+              <b>Name</b>
+               <input type="text" ng-model="selected_map.name"><br>
+            
+            
+              <b>Email</b>
+               <input type="text" ng-model="selected_map.email"> <br>
+            
+            
+              <b>Date Created</b>
+              [[selected_map.date_created]] <br>
+            
+              <b>Waypoints</b><br>
+            <div ng-repeat='waypoint in selected_map.waypoints'>
+              <b>WP [[waypoint.wp_no]]:</b>
+              Lat: <input type="text"  ng-model="waypoint.lat"> 
+              Lng: <input type="text"  ng-model="waypoint.lng"> 
+              Alt: <input type="text"  ng-model="waypoint.alt"> 
+              Action: 
+              <select name="action" id="" ng-model='waypoint.action'>
+                <option value="TAKEOFF">TAKEOFF</option>
+                <option value="LAND">LAND</option>
+                <option value="GOTO" selected>GOTO</option>
+              </select>
+              <i class="icon-trash" ng-click="remove_waypoint(waypoint)"> </i></a>
+            </div>
+            
             <!-- TODO: Add waypoint button here... -->
 
             
